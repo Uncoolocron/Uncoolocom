@@ -1,0 +1,234 @@
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('https://i.imgur.com/kDOvyfD.png'); /*url('https://opengameart.org/sites/default/files/oga-textures/tileable8e.png');*/
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-color: #003B3D;
+    background-position: center;
+
+}
+
+/* Navigation Bar Styles */
+
+.directory {
+
+    float: inline-start;
+    width: min-content;
+    height: min-content;
+    background-color: #291546;
+    border: 1px solid #285454;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+}
+
+.dButton {
+
+    background-color: #003049;
+    color: #e3d5ca;
+    cursor: pointer;
+    border: 1px solid #e3d5ca;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 125px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.dAction {
+
+  background-color: #003049;
+  color: #e3d5ca;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  z-index:1;
+  margin-top: 0.5rem;
+
+}
+
+a.dAction {
+    text-decoration: none;
+    display: block;
+}
+
+/* Collection Styles */
+
+.collection {
+    width: min-content;
+    height: auto;
+    color: #e3f5f1;
+    cursor: pointer;
+    padding: 5px; 
+}
+
+.coreC .collection:nth-child(1) { background-color: #3d1420;  border: 1px solid #ffffff;}  /* Core */
+.coreC .collection:nth-child(2) { background-color: #632240; border: 1px solid #ffffff;}  /* Maps & Vehicles */
+.coreC .collection:nth-child(3) { background-color: #632240; border: 1px solid #ffffff;}  /* True Music */
+.themeC .collection:nth-child(1) { background-color: #070c1d; border: 1px solid #000000;}  /* S.T.A.L.K.E.R. */
+.themeC .collection:nth-child(2) { background-color: #9f3c91; border: 1px solid #ffffff;}  /* Playhouse */
+.themeC .collection:nth-child(3) { background-color: #e2b570; border: 1px solid #000000;}  /* We Are Legend */
+
+a.collection {
+    text-decoration: none;
+    display: block;
+}
+
+.coreC {
+    width: min-content;
+    background-color: #291546;
+    color: #e3f5f1;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.themeC {
+    width: min-content;
+    background-color: #291546;
+    color: #e3f5f1;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.cRow {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cRow .collection {
+    margin-bottom:0;
+}
+
+/* Server Styles */
+
+.sInfo {
+    width: 100%;
+    max-width: auto;
+    margin: 1em 0 0 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.sInfo-content {
+    display: none;
+    background-color: #003049;
+    padding: 1em;
+    border-radius: 8px;
+    transition: max-height 0.3s ease;
+    margin-top: 0.5em;
+}
+
+.sInfo.open .sInfo-content {
+    display: block;
+}
+
+.sSettings-content {
+    display: none;
+    width: 100%;
+    max-width: 600px;         /* Or whatever fits your design */
+    margin: 1em auto 0 auto;  /* Center with auto margins */
+    background-color: #003049;
+    padding: 1em;
+    border-radius: 8px;
+    box-sizing: border-box;
+    line-height: 1.7; /* 1.6 is a common comfortable value */
+    text-align: left;         /* Optional: left-align text inside the box */
+}
+
+.sInfo.open .sSettings-content {
+    display: block;
+}
+
+/* Info Box Styles */
+
+.todoList {
+    width: 100%;
+    max-width: 500px;         /* Or whatever fits your design */
+    margin: 1em auto 0 auto;  /* Center with auto margins */
+    background-color: #003049;
+    font-size: 16px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    line-height: 1.8; /* 1.6 is a common comfortable value */
+    padding: 1em;
+    border-radius: 8px;
+    box-sizing: border-box;
+    line-height: 1.7; /* 1.6 is a common comfortable value */
+    text-align: left;         /* Optional: left-align text inside the box */
+}
+
+#defaultInfoBox {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 666px;      /* or whatever fits your content */
+    margin: 2rem auto;     /* center horizontally */
+    padding: 2rem 1rem;    /* less horizontal padding */
+    background: #291546;
+    color: #e3d5ca;
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 9998;
+    box-shadow: 0 2px 16px #0008;
+}
+#defaultInfoBox {
+    display: block;
+}
+
+#infoBox {
+    max-height: 80vh;         /* Never taller than 80% of the viewport */
+    overflow-y: auto;         /* Scroll inside the box if needed */
+    width: 95vw;              /* Responsive width, adjust as needed */
+    max-width: 600px;         /* Or your preferred max width */
+    box-sizing: border-box;
+    position: fixed;          /* Keep it in the viewport */
+    top: 10vh;                /* 10% from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;            /* On top of other content */
+    background: #291546;      /* Or your preferred background */
+    border-radius: 10px;
+    box-shadow: 0 2px 16px #0008;
+    padding: 2rem 1rem;
+}
+
+#infoClose {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+.wAvatar {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.summaryLabel {
+    font-size: 20px;
+    color: #e3d5ca;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#infoContent {
+    color: #e3d5ca;
+    font-family:'Times New Roman', Times, serif
+}
