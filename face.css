@@ -19,6 +19,16 @@ html, body {
 
 /* Navigation Bar Styles */
 
+.navBar {
+    background-color: #003049;
+    padding: 0;
+    border: 1px solid #285454;
+    width: 191px;
+    height: 100%;
+    position: fixed;
+    margin-top: -10px;
+}
+
 .directory {
 
     float: inline-start;
@@ -231,4 +241,26 @@ a.collection {
 #infoContent {
     color: #e3d5ca;
     font-family:'Times New Roman', Times, serif
+}
+
+.wCabbage {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.wCabbage img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
 }

@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Uncoolocom - Main Menu</title>
-    <link rel="icon" href="https://i.imgur.com/RM1Ezze.png" type="image/x-icon">
+    <link rel="icon" href="https://i.imgur.com/GpURfsD.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="face.css">
     <script src="guts.js" defer></script>
 </head>
 
 <body class="main">
 
-    <!-- Main Navigation Menu-->
+        <!-- Main Navigation Menu-->
+    <div class="navBar"></div>
         <details class="directory">
             <summary class="dButton">Cronika</summary>
             <p class="dAction">The Game</p>
@@ -48,8 +49,10 @@
 
         <details class="directory">
             <summary class="dButton">Contact</summary>
-            <p class="dAction">Personal</p>
-            <p class="dAction">Business</p>
+            <a class="dAction" href="mailto:dakotasemailnospaces@gmail.com?subject=Uncoolocat&body=">Uncoolocat</a>
+            <a class="dAction" href="mailto:uncoolocom@gmail.com?subject=Cronika%20Team&body=">Cronika Team</a>
+            <a class="dAction" href="mailto:uncoolocom@gmail.com?subject=Art%20Submissions%20Reports&body=">Art Submissions</a>
+            <a class="dAction" href="mailto:uncoolocom@gmail.com?subject=Error%2FBug Reports&body=">Error/Bug Report</a>
             <a href="https://discord.gg/u2SkcMyHmE" class="dAction" target="_blank">World of Cabbage - Discord Server</a>
         </details>
 
@@ -59,13 +62,15 @@
             <p class="dAction">What is Uncoolocom</p>
         </details>
 
-    <!-- Info Box (Shows Main Menu items on click)-->
+        <a class="wCabbage dAction" href="https://discord.gg/u2SkcMyHmE" target="_blank"><img src="https://i.imgur.com/bCHDLul.png"></a>
+
+        <!-- Info Box (Shows Navigation items on click)-->
         <div id="infoBox" style="display: none;">
             <span id="infoClose">&times;</span>
             <div id="infoContent"></div>
         </div>
 
-    <!-- Default Info Box (Shows welcome message and to-do list)-->
+        <!-- Default Info Box (Shows welcome message and to-do list)-->
 
         <div id="defaultInfoBox">
             <div>
@@ -77,13 +82,8 @@
                 <div class="todoList">
                         To-Do List:
                     <ul>
-                        <li>Update the Zomboid server and add the server information!</li>
-                        <li>Imrpove the Navigation Menu! Add a background? Add it along the top instead of the side?</li>
-                        <li>Improve the Contact menu! - Add a direct way to email me without having to go to your email, and have seperate contact methods for personal, business, submissions and bug reports!</li>
                         <li>Add all the collections for the other games</li>
                         <li>Add better pictures and descriptions for ALL collections</li>
-                        <li>Improve the styling and layout of the page</li>
-                        <li>Work on images and logos for the website</li>
                     </ul>
                 </div>
             </div>

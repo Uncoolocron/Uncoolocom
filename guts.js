@@ -69,7 +69,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show dAction info and keep track of parent details
     document.querySelectorAll('.dAction').forEach(function(el) {
         el.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent bubbling to <details> or <summary>
+            // If it's an <a> with mailto: or target="_blank", let the browser handle it
+            if (
+                el.tagName.toLowerCase() === 'a' &&
+                (el.href.startsWith('mailto:') || el.target === '_blank')
+            ) {
+                // Do not prevent default, let browser handle
+                return;
+            }
+            // Otherwise, handle as info box
+            event.preventDefault();
+            event.stopPropagation();
 
             let info = '';
         switch (el.textContent.trim()) {
@@ -150,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 break;
             case 'Homebound':
-                info = '<img src="Pictures/palette.png" alt="Something went wrong!">';
+                info = `This will eventually be my dedicated server for Minecraft!<br>It is currently under construction, but I'll eventually add some server information below.`;
                 break;
             case 'Project Zomboid':
                 info = `
@@ -177,10 +187,13 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'RimWorld':
                 info = 'RimWorld is a sci-fi colony sim driven by an intelligent AI storyteller...';
                 break;
-            case 'Personal':
+            case 'Uncoolocat':
                 info = 'Contact me at: dakotasemailnospaces@gmail.com';
                 break;
-            case 'Business':
+            case 'Team':
+                info = 'Contact me at: Uncoolocom@gmail.com';
+                break;
+            case 'Art Submissions':
                 info = 'Contact me at: Uncoolocom@gmail.com';
                 break;
             case 'Who is Uncoolocat':
